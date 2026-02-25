@@ -1,0 +1,350 @@
+.student-page {
+    padding: 2.5rem 0 5rem;
+}
+
+.student-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Header */
+.student-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.student-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(67, 233, 123, 0.12);
+    border: 1px solid rgba(67, 233, 123, 0.3);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #6ee7a0;
+    margin-bottom: 0.75rem;
+}
+
+.student-submit-btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+/* Stats */
+.student-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.student-stat {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+}
+
+.s-stat-icon {
+    font-size: 1.5rem;
+}
+
+.s-stat-val {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #f0f4ff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.s-stat-label {
+    font-size: 0.78rem;
+    color: rgba(240, 244, 255, 0.55);
+}
+
+/* Tabs */
+.student-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.student-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: rgba(240, 244, 255, 0.65);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+
+.student-tab:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f0f4ff;
+}
+
+.student-tab.active {
+    background: rgba(102, 126, 234, 0.2);
+    border-color: rgba(102, 126, 234, 0.45);
+    color: #a5b4fc;
+    font-weight: 600;
+}
+
+.tab-count {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.student-tab.active .tab-count {
+    background: rgba(102, 126, 234, 0.35);
+    color: #c7d2fe;
+}
+
+/* Search */
+.student-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 12px;
+    padding: 10px 16px;
+    transition: border-color 0.2s;
+}
+
+.student-search:focus-within {
+    border-color: rgba(102, 126, 234, 0.5);
+}
+
+.student-search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #f0f4ff;
+    font-size: 0.9rem;
+    font-family: inherit;
+    flex: 1;
+}
+
+.student-search input::placeholder {
+    color: rgba(240, 244, 255, 0.38);
+}
+
+/* Tab Panel */
+.tab-panel {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Course Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+}
+
+.s-course-card {
+    overflow: hidden;
+    padding: 0;
+    animation: fadeInUp 0.4s ease both;
+}
+
+.s-course-banner {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.s-course-emoji {
+    font-size: 3rem;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.enrolled-ribbon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #6ee7a0;
+    border: 1px solid rgba(67, 233, 123, 0.4);
+}
+
+.s-course-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.s-course-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.s-course-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f0f4ff;
+    line-height: 1.4;
+}
+
+.s-course-desc {
+    font-size: 0.8rem;
+    color: rgba(240, 244, 255, 0.58);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.s-course-instructor {
+    font-size: 0.78rem;
+    color: rgba(240, 244, 255, 0.5);
+}
+
+.s-enroll-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.enrolled-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.enrolled-actions .btn {
+    flex: 1;
+    justify-content: center;
+}
+
+/* Submissions */
+.submissions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.submission-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.4s ease both;
+}
+
+.sub-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1;
+}
+
+.sub-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(102, 126, 234, 0.18);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.sub-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sub-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f0f4ff;
+}
+
+.sub-course {
+    font-size: 0.8rem;
+    color: rgba(240, 244, 255, 0.55);
+}
+
+.sub-notes {
+    font-size: 0.78rem;
+    color: rgba(240, 244, 255, 0.45);
+    font-style: italic;
+}
+
+.sub-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.sub-date {
+    font-size: 0.72rem;
+    color: rgba(240, 244, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .student-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .student-header {
+        flex-direction: column;
+    }
+
+    .student-submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-tabs {
+        flex-direction: column;
+    }
+
+    .submission-card {
+        flex-direction: column;
+    }
+
+    .sub-right {
+        align-items: flex-start;
+    }
+}
